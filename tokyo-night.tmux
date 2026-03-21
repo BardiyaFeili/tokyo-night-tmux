@@ -72,9 +72,9 @@ tmux set -g status-left " #[fg=${THEME[blue]},bg=default,bold] #[bold,nodim]#S$h
 
 #+--- Windows ---+
 # Focus
-tmux set -g window-status-current-format "$RESET#[fg=${THEME[cyan]},bg=default,bold]#[fg=${THEME[magenta]},bold,nodim]$window_number#W#[nobold]#{?window_zoomed_flag, $zoom_number, $custom_pane}#{?window_last_flag, , }"
+tmux set -g window-status-current-format "$RESET#[fg=${THEME[cyan]},bg=default,bold]#[fg=${THEME[magenta]},bold,nodim]$window_number#W#[nobold]#{?window_zoomed_flag, $zoom_number, $custom_pane} "
 # Unfocused
-tmux set -g window-status-format "$RESET#[fg=${THEME[foreground]}]${RESET}$window_number#W#[nobold,dim]#{?window_zoomed_flag, $zoom_number, $custom_pane}"
+tmux set -g window-status-format "$RESET#[fg=${THEME[foreground]}]${RESET}$window_number#W#[nobold,dim]#{?window_zoomed_flag, $zoom_number, $custom_pane} "
 
 #+--- Bars RIGHT ---+
 tmux set -g status-right "$battery_status$current_path$cmus_status$netspeed$git_status$wb_git_status$date_and_time"
